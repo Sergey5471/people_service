@@ -26,16 +26,26 @@ function setLocalStorage(key1, value1, key2, value2) {
 
 function drawErrorMessage(color, textMessage, place) {
 	const errorMessage = document.createElement('p')
+	errorMessage.id = "error__message"
 	errorMessage.style.color = color
 	errorMessage.innerText = textMessage
 	place.after(errorMessage)
 }
 
-
+function removeErrorMessage() {
+	const messageRemove = document.getElementById('error__message')
+	if (messageRemove != null) {
+		messageRemove.remove()
+	}
+	
+	
+	
+}
 
 export {
 	checkValidForm,
 	checkLoginPass,
 	setLocalStorage,
 	drawErrorMessage,
+	removeErrorMessage,
 }

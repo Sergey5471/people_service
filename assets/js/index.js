@@ -1,6 +1,7 @@
 import {
 	checkValidForm,
 	checkLoginPass,
+	removeErrorMessage,
 } from './auth.js'
 import {
 	checkSingIn,
@@ -20,6 +21,7 @@ authForm.addEventListener('input', function (event) {
 
 authForm.addEventListener('submit', function (event) {
 	event.preventDefault()
+	removeErrorMessage()
 	let emailValue = this.elements.email.value
 	let passValue = this.elements.password.value
 	checkLoginPass(emailValue, passValue)

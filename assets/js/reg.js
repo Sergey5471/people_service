@@ -1,6 +1,7 @@
 import {
 	drawErrorMessage,
 	checkValidForm,
+	removeErrorMessage,
 } from './auth.js'
 import { data } from './data.js'
 
@@ -16,6 +17,7 @@ regForm.addEventListener('input', function () {
 
 regForm.addEventListener('submit', function (event) {
 	event.preventDefault()
+	removeErrorMessage()
 	let emailValue = this.elements.email.value
 	let passValue = this.elements.password.value
 	let passValueRepeat = this.elements.passwordRepeat.value
