@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Добро пожаловать!</title>
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/auth.css">
+	
+</head>
+
+<body>
+	<div class="auth">
+		<div class="auth__wrapper"> 
+		  <h1 class="auth__title">Вход в систему</h1>
+		  <p class="auth__text">Для входа в систему введите свой логин и пароль</p>
+		  <form class="auth__form" name="authForm"> 
+			<label class="auth__label" for="email">Логин
+			  <input class="auth__email" type="email" name="email" required>
+			</label>
+			<label class="auth__label" for="password">Пароль
+			  <input class="auth__pass" type="password" name="password" required >
+			</label>
+			<button class="auth__btn" type="submit" name="formBtn" disabled>Войти</button>
+		  </form>
+		  <p class="auth__text">Новый пользователь? <a class="auth__link" href="./app/registration/reg.html">Зарегистрироваться.</a></p>
+		</div>
+	  </div>
+	
+	
+	<script type="module" src="./assets/js/index.js"></script>
+</body>
+
+</html>

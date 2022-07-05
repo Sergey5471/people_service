@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./reg.css">
+	<title>Регистрация</title>
+</head>
+<body>
+	<div class="reg">
+		<div class="reg__wrapper">
+			<h1 class="reg__title">Регистрация</h1>
+			<p class="reg__text">Для регистрации в ситстеме введите свой логин и пароль</p>
+			<form class="reg__form" name="regForm"> 
+				<label class="reg__label" for="email">Логин
+					<input class="reg__email" type="email" name="email" required>
+				</label>
+				<label class="reg__label" for="password">Пароль
+					<input class="reg__pass" type="password" name="password" required minlength="3">
+				</label>
+				<label class="reg__label" for="password">Повторите Пароль
+					<input class="reg__pass" type="password" name="passwordRepeat" required minlength="3"> 
+				</label>
+				<button class="reg__btn" type="submit" name="formBtn" >Зарегестрироваться</button>
+			</form>
+			<p class="reg__text">Есть аккаунт? <a class="reg__link" href="../../index.html">Пройдите авторизацию</a></p>
+		</div>
+	</div>
+	<script type="module" src="../../assets/js/reg.js"></script>
+</body>
+</html>
