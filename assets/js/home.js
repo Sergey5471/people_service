@@ -1,6 +1,11 @@
 import {
 	exit,
+	checkLocalStorage,
 } from './funkList.js'
+
+window.addEventListener('load', function () {
+	checkLocalStorage()
+})
 
 const user = document.getElementById('user')
 const userName = localStorage.getItem('login')

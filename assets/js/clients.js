@@ -3,8 +3,14 @@ import {
 } from './home.js'
 
 import {
+	checkLocalStorage,
 	exit 
 } from './funkList.js'
+
+
+window.addEventListener('load', function () {
+	checkLocalStorage()
+})
 
 exitBtn.addEventListener('click', function () {
 	exit()

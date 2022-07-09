@@ -10,6 +10,14 @@ function checkSingIn() {
 	})
 }
 
+function checkLocalStorage() {
+	const localLogin = localStorage.getItem('login')
+	const localPass = localStorage.getItem('pass')
+	if (localLogin == undefined && localPass == undefined) {
+		window.location.replace('../../index.html')
+	}
+}
+
 function exit() {
 	localStorage.clear()
 	window.location.replace('../../index.html')
@@ -17,5 +25,6 @@ function exit() {
 
 export {
 	checkSingIn,
+	checkLocalStorage,
 	exit,
 }
