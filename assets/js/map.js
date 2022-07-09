@@ -51,7 +51,6 @@ function initMap() {
 		drawMarker(markerProperty[i][0],markerProperty[i][1],markerProperty[i][2],)
 	}
 
-
 	function drawMarker(text, lat, lng) {
 		const marker = new google.maps.Marker({
 			position: { lat: lat, lng: lng, },
@@ -64,29 +63,8 @@ function initMap() {
 		marker.addListener('click', function () {
 			InfoWindow.open(map, marker)
 		})
-	
 	}
-	
-
-
 }
-
-
-
-
-// function drawmarker2(text, lat, lng) {
-// 	const marker = new google.maps.Marker({
-// 		position: { lat: lat, lng: lng, },
-// 		map: map
-// 	})
-// 	const InfoWindow = new google.maps.InfoWindow({
-// 		content: `<h3>${text}</h3>`
-// 	})
-// 	marker.addListener('click', function () {
-// 		InfoWindow.open(map, marker)
-// 	})
-// }
-
 
 window.initMap = initMap;
 
