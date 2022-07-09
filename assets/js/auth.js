@@ -36,6 +36,7 @@ function removeErrorMessage() {
 	const messageRemove = document.getElementById('error__message')
 	if (messageRemove != null) {
 		messageRemove.remove()
+		
 	}
 	
 	

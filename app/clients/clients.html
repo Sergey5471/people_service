@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../../assets/css/style.css">
+	<link rel="stylesheet" href="./clients.css">
 	<title>Clients</title>
 </head>
 <body>
@@ -25,7 +26,7 @@
 							<a href="../home/home.html">Home</a>	
 						</li>
 						<li class="nav__link">
-							<a class='active__page' href="">Clients</a>	
+							<a class='active__page' href="">Users</a>	
 						</li>
 						<li class="nav__link">
 							<a href="../map/map.html">Map</a>
@@ -40,11 +41,37 @@
 		</div>
 	</header>
 	<main>
-		<section class="clients">
+		<section class="users">
 			<div class="container">
-				<h2 class="clients__title">Список клиентов</h2>
+				<h2 class="users__title">Users list</h2>
+				<div class="users__info">
+					<div class="users__male" id="userMale"></div>
+					<div class="users__female" id="userFemale"></div>
+					<div class="users__balance" id="userBalance">
+						The largest balance
+					</div>
+				</div>
+				<table class="users__table">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Company</th>
+							<th>Email</th>
+							<th>Phone</th>
+							<th>Balance</th>
+							<th>Registration date</th>
+						</tr>
+					</thead>
+					<tbody class="clients__tbody" id="clientsTBody">
+						
+					</tbody>
+				</table>
 			</div>
 		</section>
+		<div class="up__btn">
+			<span class="left"></span>
+			<span  class="right"></span>
+		</div>
 	</main>
 <script type="module" src="../../assets/js/clients.js"></script>
 </body>

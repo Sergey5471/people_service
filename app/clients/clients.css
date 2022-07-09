@@ -1,0 +1,152 @@
+.users {
+	margin-bottom: 100px;
+}
+.users__title {
+	text-align: center;
+	text-decoration: underline;
+}
+
+.users__info {
+	display: flex;
+	/* gap: 100px; */
+	justify-content: space-around;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+table {
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+thead {
+	text-align: left;
+	font-size: 18px;
+}
+th {
+	padding-left: 10px;
+}
+tbody {
+	font-size: 18px;
+	
+}
+
+td {
+	padding: 5px 10px ;
+	margin: 15px 0;
+	
+}
+
+.button__modal {
+	display: block;
+	padding: 7px;
+	background-color: rgb(255, 95, 95);
+	border: none;
+	border-radius: 5px 0 0 5px;
+	cursor: pointer;
+}
+
+.modal__window {
+	background-color: rgb(248, 229, 206);
+	padding: 25px 25px 0 25px;
+	border-radius: 10px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.modal__title {
+	margin-top: 0;
+}
+
+.modal__window button {
+	display: block;
+	padding: 10px;
+	margin: 15px auto;
+	border: 1px solid black;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.modal__button-delete {
+	background-color: rgb(255, 95, 95);
+
+}
+.modal__button-cancel {
+	background-color: rgb(184, 184, 184);
+
+}
+
+.modal__success {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	font-size: 20px;
+	color: dimgrey;
+	background-color: rgb(255, 95, 95);
+	border: 1px solid black;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	border-radius: 25px 0 0 0;
+
+}
+.up__btn {
+	display: none;
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	left: 50px;
+	bottom: 50px;
+	background-color: rgba(97, 97, 97, 0.473);
+	border-radius: 50%;
+	cursor: pointer;
+
+}
+.up__btn span{
+	position: absolute;
+	width: 20px;
+	height: 4px;
+	top: 40%;
+	border-radius: 5px;
+	background-color: rgb(85, 85, 85);
+	animation: arrow linear infinite 0.9s;
+	
+}
+
+.left {
+	transform-origin: 100% 50%;
+	transform: rotate(-45deg);
+	right: 48%;
+	
+}
+.right {
+	transform-origin: 0 50%;
+	transform: rotate(45deg);
+	left: 48%;
+	
+}
+
+@keyframes arrow {
+	0% {
+		opacity: 0;
+		top: 40%
+	}
+
+	25% { 
+		opacity: 0.5;
+		top: 30%;
+	}
+	50% {
+		opacity: 1;
+		top: 25%;
+	}
+
+	75% {
+		opacity: 0.5;
+		top: 20%
+	}
+
+	100% {
+		opacity: 0;
+		top: 30%
+	}
+}

@@ -11,48 +11,81 @@ exitBtn.addEventListener('click', function () {
 })
 
 
-// function initMap() {
-//     let locations = [
-//         ['Shop №1', 53.93187753029889, 27.65008890420089, 1],
-//         ['Shop №2', 53.93115283699134, 27.63719370707769, 2],
-//         ['Shop №3', 53.936573744297746, 27.61321361156399, 3],
-//         ['Shop №4', 53.936169887814074, 27.595745797123858, 4],
-//         ['Shop №5', 53.92878192988065, 27.582627163589375, 5],
-//         ['Shop №6', 53.91315886061578, 27.60538140828371, 6],
-//         ['Shop №7', 53.89031275353563, 27.609349990830715, 7],
-//         ['Shop №8', 53.87872782790282, 27.593861507360938, 8],
-//         ['Shop №9', 53.86319875580873, 27.567809076457632, 9],
-//         ['Shop №10', 53.86628169775165, 27.508384519642636, 10],
-//         ['Shop №11', 53.868790726518284, 27.479745119858688, 11],
-//         ['Shop №12', 53.86291071680432, 27.440889784373674, 12],
-//         ['Shop №13', 53.887041648286086, 27.43727931494765, 13],
-//         ['Shop №14', 53.91571766075251, 27.47018445080508, 14],
-//         ['Shop №15', 53.93864307880945, 27.48552005508541, 15],
-//     ];
-//     const map = new google.maps.Map(document.getElementById('googleMap'), {
-//         zoom: 12,
-//         center: new google.maps.LatLng(53.90089008939261, 27.55758402318272),
-//     });
+function initMap() {
+	const mapBox = document.getElementById('map')
+	const options = {
+		zoom: 11,
+		center: { lat: 53.893009, lng: 27.567444, }
+	};
 
-//     const infowindow = new google.maps.InfoWindow;
+	const map = new google.maps.Map(mapBox, options)
+	
+	const markerProperty = [
+		['Job', 53.95960271500719, 27.53526912954463],
+		['Home', 53.86430335038314, 27.53772705660463],
+		['Gym', 53.905874643481525, 27.53911108866668],
+		['Shop', 53.8475637830196, 27.47115475708255],
+		['Shaverma', 53.95843296831541, 27.535737264871408],
+		['BMW', 53.97226889814744, 27.588758621980325],
+		['Friend', 53.91089894653826, 27.677730468361748],
+		['Cinema', 53.93279131602541, 27.51041200140334],
+		['Hospital', 53.917071407099606, 27.56882788432859],
+		['Subway', 53.87713282428844, 27.549531251417356],
+		['Flat', 53.86789698874619, 27.48303693617832],
+		['Parents', 53.848734263232316, 27.45706407044307],
+		['Mordor', 53.94333670523516, 27.630317788943387],
+		['Brother', 53.90032561608092, 27.429944186175405],
+		['Park', 53.847612809084545, 27.52069448680881]
 
-//     let marker, i;
+	]
 
-//     for (i = 0; i < locations.length; i++) {
-//         marker = new google.maps.Marker({
-//             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-//             map: map
-//         });
+	for (let i = 0; i < markerProperty.length; i++) {
+		console.log(markerProperty[i][0]);
+		console.log(markerProperty[i][1]);
+		console.log(markerProperty[i][2]);
+		drawMarker(markerProperty[i][0],markerProperty[i][1],markerProperty[i][2],)
+	}
 
-//         google.maps.event.addListener(marker, 'click', (function(marker, i) {
-//             return function() {
-//                 infowindow.setContent(locations[i][0]);
-//                 infowindow.open(map, marker);
-//             }
-//         })(marker, i));
-//     }
+
+	function drawMarker(text, lat, lng) {
+		const marker = new google.maps.Marker({
+			position: { lat: lat, lng: lng, },
+			map: map
+		})
+		const InfoWindow = new google.maps.InfoWindow({
+			content: `<h3>${text}</h3>`
+		})
+	
+		marker.addListener('click', function () {
+			InfoWindow.open(map, marker)
+		})
+	
+	}
+	
+
+
+}
+
+
+
+
+// function drawmarker2(text, lat, lng) {
+// 	const marker = new google.maps.Marker({
+// 		position: { lat: lat, lng: lng, },
+// 		map: map
+// 	})
+// 	const InfoWindow = new google.maps.InfoWindow({
+// 		content: `<h3>${text}</h3>`
+// 	})
+// 	marker.addListener('click', function () {
+// 		InfoWindow.open(map, marker)
+// 	})
 // }
 
-// window.initMap = initMap;
+
+window.initMap = initMap;
+
+
+
 
 

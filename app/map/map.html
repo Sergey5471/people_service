@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../../assets/css/style.css">
+	<link rel="stylesheet" href="./map.css">
 	<title>Map</title>
 </head>
 <body>
@@ -25,7 +26,7 @@
 							<a href="../home/home.html">Home</a>	
 						</li>
 						<li class="nav__link">
-							<a href="../clients/clients.html">Clients</a>	
+							<a href="../clients/clients.html">Users</a>	
 						</li>
 						<li class="nav__link">
 							<a class='active__page' href="#">Map</a>
@@ -43,9 +44,30 @@
 		<section class="map">
 			<div class="container">
 				<h2 class="map__title">Map</h2>
+				<div class="map__box" id="map" ></div>
 			</div>
 		</section>
 	</main>
 	<script type="module" src="../../assets/js/map.js"></script>
+	
+	<!-- <script>
+		function initMap() {
+		const mapBox = document.getElementById('map')
+		const options = {
+		zoom: 10,
+		center: { lat: 53.893009, lng: 27.567444, }
+	};
+
+	const map = new google.maps.Map(mapBox, options)
+	
+}
+	</script> -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0O_r8KwaCXYoDbgdT9JToE9Wn8gz6wpY&amp;callback=initMap&amp;v=weekly" defer=""></script>
+	
+	<!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0O_r8KwaCXYoDbgdT9JToE9Wn8gz6wpY&callback=initMap&v=weekly"
+      defer
+    ></script> -->
+	
 </body>
 </html>
